@@ -137,3 +137,18 @@ res.set({
     'X-PHP': 'Like'
 });
 ```
+
+### URL 파라미터 파싱 / 설정하기 `[단독사용가능]`
+- import 하기
+```js
+const QueryStringParser = require("#extension/QueryStringParser.js");
+```
+
+- 사용하기
+```js
+const qs = new QueryStringParser('쿼리스트링 파라미터 값 (string)');
+qs.parse(); // string 쿼리스트링 파라미터 데이터 파싱
+qs.get(); // object로 반환됨
+qs.set('인덱스', '값'); // 데이터 추가
+qs.remove('인덱스'); // 파라미터 인덱스 제거
+```
